@@ -1,0 +1,18 @@
+<div class="container">
+  <button nz-button nzType="default" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="dropdown-button">
+    All
+    <span nz-icon nzType="down"></span>
+  </button>
+  <nz-input-group [nzPrefix]="prefixIconSearch" class="input-group">
+    <input type="text" nz-input placeholder="Search" />
+  </nz-input-group>
+  <button nz-button nzType="primary" class="search-button">Search</button>
+</div>
+
+
+<ng-template #prefixIconSearch>
+  <img src="../../../assets/svgs/🔽%20Icon.svg" alt="search">
+</ng-template>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  HELLO
+</nz-dropdown-menu>
