@@ -60,4 +60,20 @@
       </ng-template>
     </div>
   </div>
+  <nz-divider></nz-divider>
+  <div class="second-row">
+    <div class="payment">
+      <button *ngFor="let paymentMethod of paymentMethods" nz-button>
+        <img [src]="paymentMethod.path" alt="">
+      </button>
+    </div>
+
+    <h3 class="rights">©2023 Electro All Rights are reserved️ </h3>
+
+    <div class="social">
+      <button *ngFor="let socialMedia of socialMedias" nz-button nzType="text">
+        <img [src]="socialMedia.path" alt="">
+      </button>
+    </div>
+  </div>
 </div>

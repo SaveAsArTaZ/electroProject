@@ -74,6 +74,25 @@
       }
     }
   }
+
+  .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.5rem;
+
+    .payment,.social {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .rights {
+      color: var(--white);
+    }
+  }
 }
 
 .input-group {
