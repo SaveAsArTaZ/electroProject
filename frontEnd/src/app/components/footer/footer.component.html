@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="first-row">
+    <div class="data">
+      <div class="logo">
+        <img
+          src="../../../assets/svgs/electroLogoLight.svg"
+          alt="electro-logo"
+        />
+      </div>
+
+      <div class="telephone">
+        <img src="../../../assets/svgs/telephone.svg" alt="telephone" />
+        (316) 555-0116
+      </div>
+
+      <div class="email">
+        <img src="../../../assets/svgs/gmail.svg" alt="email" />
+        electro&#64;example.com
+      </div>
+
+      <div class="location">
+        <img src="../../../assets/svgs/location.svg" alt="location" />
+        4140 Parker Rd. Allentown, New Mexico 31134
+      </div>
+    </div>
+
+    <div class="information">
+      <h3>{{ informationItems.title }}</h3>
+      <a *ngFor="let item of informationItems.items" class="item">
+        {{ item.name }}
+      </a>
+    </div>
+
+    <div class="service">
+      <h3>{{ serviceItems.title }}</h3>
+      <a *ngFor="let item of serviceItems.items" class="item">
+        {{ item.name }}
+      </a>
+    </div>
+
+    <div class="subscribe">
+      <h3>Subscribe</h3>
+      <p>
+        Enter your email below to be the first to know about new collections.
+      </p>
+      <nz-input-group
+        [nzSuffix]="suffixTemplateInfo"
+        [nzPrefix]="prefixTemplateUser"
+        class="input-group"
+      >
+        <input type="text" nz-input placeholder="Enter your username" />
+      </nz-input-group>
+      <ng-template #prefixTemplateUser>
+        <img src="../../../assets/svgs/gmail.svg" alt="email" />
+      </ng-template>
+      <ng-template #suffixTemplateInfo>
+        <button nz-button nzType="text">
+          <span nz-icon nzType="right"></span>
+        </button>
+      </ng-template>
+    </div>
+  </div>
+  <nz-divider></nz-divider>
+  <div class="second-row">
+    <div class="payment">
+      <button *ngFor="let paymentMethod of paymentMethods" nz-button>
+        <img [src]="paymentMethod.path" alt="">
+      </button>
+    </div>
+
+    <h3 class="rights">©2023 Electro All Rights are reserved️ </h3>
+
+    <div class="social">
+      <button *ngFor="let socialMedia of socialMedias" nz-button nzType="text">
+        <img [src]="socialMedia.path" alt="">
+      </button>
+    </div>
+  </div>
+</div>
