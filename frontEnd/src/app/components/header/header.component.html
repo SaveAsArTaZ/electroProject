@@ -1,18 +1,25 @@
 <div class="container">
   <div class="first-row">
-    <img src="../../../assets/svgs/electroLogo.svg" alt="electro-logo" class="logo"/>
+    <img
+      src="../../../assets/svgs/electroLogo.svg"
+      alt="electro-logo"
+    />
     <app-search-box></app-search-box>
     <app-information></app-information>
   </div>
   <div class="second-row">
-    <button nz-button   nz-dropdown [nzDropdownMenu]="dropdownMenu" nzType="text" class="dropdown-button">
-      <img src="../../../assets/svgs/menu-line-horizontal.svg" alt="search">
+    <button
+      nz-button
+      nz-dropdown
+      [nzDropdownMenu]="dropdownMenu"
+      nzType="text"
+      class="dropdown-button"
+    >
+      <img src="../../../assets/svgs/menu-line-horizontal.svg" alt="search" />
       All Categories
       <span nz-icon nzType="down"></span>
     </button>
     <app-navigation></app-navigation>
   </div>
 </div>
-<nz-dropdown-menu #dropdownMenu="nzDropdownMenu">
-  hello
-</nz-dropdown-menu>
+<nz-dropdown-menu #dropdownMenu="nzDropdownMenu"> hello </nz-dropdown-menu>
