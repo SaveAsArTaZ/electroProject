@@ -2,5 +2,20 @@
 :root {
   --primary-color: hsl(214, 67%, 33%);
   --gray: hsla(206, 4%, 66%, 0.05);
-  --black : #1f1f1f
+  --gray-2: hsla(206, 4%, 66%, 0.1);
+  --black: hsl(0, 0%, 12%);
+  --white: hsl(0, 0%, 100%);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/font/Montserrat-VariableFont_wght.ttf");
+  font-style: normal;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  overflow: hidden;
 }
