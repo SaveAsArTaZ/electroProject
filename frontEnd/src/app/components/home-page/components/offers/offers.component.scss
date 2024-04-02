@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  padding-inline: 15rem;
+  padding-block-end: 5rem;
+
+  .card {
+    height: 16rem;
+    width: 35rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background-color: var(--gray-2);
+
+    transition: all ease 300ms;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      transform: translate(2rem, 2rem);
+    }
+
+    .information {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      padding: 1rem;
+
+      .name {
+        width: 17rem;
+      }
+
+      p {
+        font-weight: 400;
+      }
+      .offer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color-2);
+        width: 5rem;
+        height: 2rem;
+
+        border-radius: 5px;
+
+        font-weight: 400;
+      }
+
+      .shop-button {
+        background-color: var(--primary-color);
+
+        width: 10rem;
+        height: 3.5rem;
+
+        border-radius: 5px;
+      }
+    }
+  }
+}

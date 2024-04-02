@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  background-color: var(--gray-2);
+
+  .ellipse,
+  .man,
+  .title,
+  .description,
+  .shop-button {
+    position: absolute;
+  }
+
+  .ellipse {
+    inset-block-start: 13rem;
+    inset-inline-end: 10rem;
+  }
+
+  .man {
+    inset-block-end: 7rem;
+    inset-inline-end: 13rem;
+  }
+
+  .title {
+    inset-inline-start: 14rem;
+    inset-block-start: 16.5rem;
+
+    width: 32rem;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  .description {
+    inset-inline-start: 14rem;
+    inset-block-start: 35rem;
+    width: 32rem;
+    font-size: 1.2rem;
+  }
+
+  .shop-button {
+    background-color: var(--primary-color);
+    inset-inline-start: 14rem;
+    inset-block-start: 42rem;
+
+    width: 10rem;
+    height: 3.5rem;
+
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="title">
+    <h1>Our Bestseller Products</h1>
+    <ul class="list">
+      <li (click)="onListItemClicked($event)" class="list-item" #item>New</li>
+      <li (click)="onListItemClicked($event)" class="list-item" #item>
+        Featured
+      </li>
+      <li (click)="onListItemClicked($event)" class="list-item" #item>
+        Top Rated
+      </li>
+    </ul>
+  </div>
+  <div class="grid-content">
+    <div class="big-content">
+      <div class="information">
+        <h1>Apple iPad Pro Wi-Fi</h1>
+        <p class="price">$1520</p>
+      </div>
+      <img src="../../../../../assets/svgs/iphone-3.svg" alt="" />
+    </div>
+    <div class="small-content small-content-1">
+      <img src="../../../../../assets/svgs/image 19.svg" alt="" class="image" />
+      <h3>Apple iPad Mini 6 Wi-Fi</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$500.00</p>
+    </div>
+    <div class="small-content small-content-2">
+      <img src="../../../../../assets/svgs/image 20.svg" alt="" class="image" />
+      <h3>Microsoft Surface Go</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$399.00</p>
+    </div>
+    <div class="small-content small-content-3">
+      <img src="../../../../../assets/svgs/image 21.svg" alt="" class="image" />
+      <h3>LG 4K Ultra UHD TV</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$5500.00</p>
+    </div>
+    <div class="small-content small-content-4">
+      <img src="../../../../../assets/svgs/image 18.svg" alt="" class="image" />
+      <h3>Samsung Galaxy S22 Ultra</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$1350.00</p>
+    </div>
+    <div class="small-content small-content-5">
+      <img src="../../../../../assets/svgs/image 22.svg" alt="" class="image" />
+      <h3>Apple iPhone 14 Plus</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$850.00</p>
+    </div>
+    <div class="small-content small-content-6">
+      <img src="../../../../../assets/svgs/image 17.svg" alt="" class="image" />
+      <h3>Bose QuietComfort 45</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$300.00</p>
+    </div>
+  </div>
+</div>

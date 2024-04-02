@@ -1,8 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --primary-color: hsl(214, 67%, 33%);
+  --primary-color-2: hsla(214, 67%, 33%, 0.1);
   --gray: hsla(206, 4%, 66%, 0.05);
   --gray-2: hsla(206, 4%, 66%, 0.1);
-  --black : hsl(0, 0%, 12%);
-  --white: hsl(0, 0%, 100%);
+  --gray-3: hsla(0, 0%, 71%, 0.3);
+  --black: hsl(0, 0%, 12%);
+  --white: hsl(0, 0%, 100%, 1);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/font/Montserrat-VariableFont_wght.ttf");
+  font-style: normal;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+
+  p{
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
 }

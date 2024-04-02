@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="title">
+    <h1>Our Bestseller Products</h1>
+    <ul class="list">
+      <li (click)="onListItemClicked($event)" class="list-item" #item>New</li>
+      <li (click)="onListItemClicked($event)" class="list-item" #item>
+        Featured
+      </li>
+      <li (click)="onListItemClicked($event)" class="list-item" #item>
+        Top Rated
+      </li>
+    </ul>
+  </div>
+  <div class="grid-content">
+    <div class="big-content">
+      <div class="information">
+        <h1>Apple iPad Pro Wi-Fi</h1>
+        <p class="price">$1520</p>
+      </div>
+      <img src="../../../../../assets/svgs/image 32.svg" alt="" />
+    </div>
+    <div class="small-content small-content-1">
+      <img src="../../../../../assets/svgs/image 24.svg" alt="" class="image" />
+      <h3 nz-tooltip nzTooltipTitle="Panasonic Lumix DC-GH5 II">
+        Panasonic Lumix DC-GH5 II
+      </h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$1500.00</p>
+    </div>
+    <div class="small-content small-content-2">
+      <img src="../../../../../assets/svgs/image 25.svg" alt="" class="image" />
+      <h3>Asus ROG Delta S</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$250.00</p>
+    </div>
+    <div class="small-content small-content-3">
+      <img src="../../../../../assets/svgs/image 26.svg" alt="" class="image" />
+      <h3>Xiaomi Fimi X8 Mini</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$650.00</p>
+    </div>
+    <div class="small-content small-content-4">
+      <img src="../../../../../assets/svgs/image 27.svg" alt="" class="image" />
+      <h3>Apple iPhone 13</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$500.00</p>
+    </div>
+    <div class="small-content small-content-5">
+      <img src="../../../../../assets/svgs/image 28.svg" alt="" class="image" />
+      <h3 nz-tooltip nzTooltipTitle="Fossil Gen 6 Smart Watch">
+        Fossil Gen 6 Smart Watch
+      </h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$450.00</p>
+    </div>
+    <div class="small-content small-content-6">
+      <img src="../../../../../assets/svgs/image 29.svg" alt="" class="image" />
+      <h3>Apple iPad Air Wi-Fi</h3>
+      <nz-rate [ngModel]="5"></nz-rate>
+      <p>$850.00</p>
+    </div>
+  </div>
+</div>

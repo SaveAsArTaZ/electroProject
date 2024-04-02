@@ -1,0 +1,13 @@
+<div class="container">
+  <div *ngFor="let item of items" class="card">
+    <div class="information">
+      <div class="offer">50% OFF</div>
+      <h1 class="name">{{ item.name }}</h1>
+      <p>Don’t miss the last opportunity </p>
+      <button nz-button nzType="primary" class="shop-button">
+        Shop Now <span nz-icon nzType="right" nzTheme="outline"></span>
+      </button>
+    </div>
+    <img [src]="item.imgPath" alt="" />
+  </div>
+</div>
