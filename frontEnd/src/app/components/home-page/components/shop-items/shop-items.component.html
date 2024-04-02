@@ -1,12 +1,20 @@
 <div class="container">
   <h1 class="title">Shop by Categories</h1>
-  <nz-carousel nzEffect="scrollx" nzDotPosition="left" [nzAutoPlay]="true" class="carousel">
+  <nz-carousel
+    nzEffect="scrollx"
+    nzDotPosition="left"
+    [nzAutoPlay]="true"
+    class="carousel"
+  >
     <div *ngFor="let item of items" nz-carousel-content>
       <div class="content-container">
+        <div class="information">
+          <h1>{{ item.title }}</h1>
+          <p>{{item.description}}</p>
+        </div>
         <div class="collapse">
           <img [src]="item.path" alt="" />
         </div>
-        <h4>{{item.title}}</h4>
       </div>
     </div>
   </nz-carousel>
