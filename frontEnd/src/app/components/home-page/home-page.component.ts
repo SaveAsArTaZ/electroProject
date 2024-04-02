@@ -5,6 +5,7 @@ import { OffersComponent } from './components/offers/offers.component';
 import { BestSellerProductsComponent } from './components/best-seller-products/best-seller-products.component';
 import { NewProductComponent } from './components/new-product/new-product.component';
 import { TopSellingProductComponent } from './components/top-selling-product/top-selling-product.component';
+import { InformationComponent } from './components/information/information.component';
 
 @Component({
   selector: 'app-home-page',
@@ -16,6 +17,7 @@ import { TopSellingProductComponent } from './components/top-selling-product/top
     BestSellerProductsComponent,
     NewProductComponent,
     TopSellingProductComponent,
+    InformationComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
