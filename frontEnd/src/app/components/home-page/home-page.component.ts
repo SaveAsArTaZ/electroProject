@@ -3,6 +3,7 @@ import { DescriptionComponent } from './components/description/description.compo
 import { ShopItemsComponent } from './components/shop-items/shop-items.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { BestSellerProductsComponent } from './components/best-seller-products/best-seller-products.component';
+import { NewProductComponent } from './components/new-product/new-product.component';
 
 @Component({
   selector: 'app-home-page',
@@ -12,6 +13,7 @@ import { BestSellerProductsComponent } from './components/best-seller-products/b
     ShopItemsComponent,
     OffersComponent,
     BestSellerProductsComponent,
+    NewProductComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
