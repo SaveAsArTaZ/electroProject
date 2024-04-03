@@ -164,6 +164,31 @@
       }
     }
   }
+
+  .related-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 1rem;
+
+    .item {
+      flex-grow: 1;
+
+      img {
+        padding: 1rem;
+        width: 15rem;
+        height: 20rem;
+        background-color: var(--gray);
+
+        border-radius: 5px;
+      }
+
+      h3 {
+        padding-block-start: 1rem;
+      }
+    }
+  }
 }
 .box {
   width: 1rem;

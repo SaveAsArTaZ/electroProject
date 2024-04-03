@@ -83,6 +83,18 @@
       </div>
     </div>
   </div>
+  <app-tabs></app-tabs>
+
+  <h1>Related Products</h1>
+
+  <div class="related-items">
+    <div *ngFor="let relatedItem of relatedItems" class="item">
+      <img [src]="relatedItem.imgPath" alt="" />
+      <h3>{{ relatedItem.name }}</h3>
+      <nz-rate [(ngModel)]="relatedItem.rate"></nz-rate>
+      <p>{{ relatedItem.price }}</p>
+    </div>
+  </div>
 </div>
 .<ng-template #dot>
   <div class="box"></div>

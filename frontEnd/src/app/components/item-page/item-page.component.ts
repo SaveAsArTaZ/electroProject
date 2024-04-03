@@ -14,6 +14,7 @@ import { NzInputNumberComponent } from 'ng-zorro-antd/input-number';
 import { NzButtonComponent } from 'ng-zorro-antd/button';
 import { NzIconDirective } from 'ng-zorro-antd/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 @Component({
   selector: 'app-item-page',
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     NzButtonComponent,
     NzIconDirective,
     HttpClientModule,
+    TabsComponent,
   ],
   templateUrl: './item-page.component.html',
   styleUrl: './item-page.component.scss',
@@ -59,6 +61,32 @@ export class ItemPageComponent {
     },
     {
       path: '../../../assets/svgs/twitter.svg',
+    },
+  ];
+  protected relatedItems = [
+    {
+      imgPath: '../../../assets/svgs/iphone.svg',
+      name: 'Apple iPhone 14 Plus',
+      rate: 3,
+      price: '$850.00',
+    },
+    {
+      imgPath: '../../../assets/svgs/image 26.svg',
+      name: 'Xiaomi Fimi X8 Mini',
+      rate: 4.5,
+      price: '$650.00',
+    },
+    {
+      imgPath: '../../../assets/svgs/image 29.svg',
+      name: 'Apple iPad Mini 6 Wi-Fi',
+      rate: 5,
+      price: '$500.00',
+    },
+    {
+      imgPath: '../../../assets/svgs/image 17.svg',
+      name: 'Asus ROG Delta S',
+      rate: 2,
+      price: '$250.00',
     },
   ];
 }
