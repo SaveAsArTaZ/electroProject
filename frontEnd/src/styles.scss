@@ -7,6 +7,8 @@
   --gray-3: hsla(0, 0%, 71%, 0.3);
   --black: hsl(0, 0%, 12%);
   --white: hsl(0, 0%, 100%, 1);
+  --green: hsla(119, 62%, 52%, 0.1);
+  --green-2: hsl(119, 62%, 52%);
 }
 @font-face {
   font-family: "Montserrat";
@@ -35,7 +37,7 @@ html {
     font-weight: 700;
   }
 
-  p{
+  p {
     font-weight: 400;
     font-size: 1.1rem;
   }

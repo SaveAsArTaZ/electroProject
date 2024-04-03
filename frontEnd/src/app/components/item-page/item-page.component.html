@@ -1,0 +1,101 @@
+<div class="container">
+  <nz-breadcrumb nzSeparator=">">
+    <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a>Shop</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>Apple iPhone 14 Pro</nz-breadcrumb-item>
+  </nz-breadcrumb>
+
+  <div class="information">
+    <nz-carousel
+      nzEffect="fade"
+      [nzAutoPlay]="true"
+      [nzDotRender]="dot"
+      class="carousel"
+    >
+      <div *ngFor="let item of items" nz-carousel-content>
+        <div class="content-container">
+          <img [src]="item.path" alt="" />
+        </div>
+      </div>
+    </nz-carousel>
+
+    <div class="data">
+      <div class="title">
+        <h1>Apple iPhone 14 Pro</h1>
+
+        <div class="stack">In Stock</div>
+      </div>
+
+      <div class="rate">
+        <nz-rate [ngModel]="0"></nz-rate>
+        <p>5.0 (121 Reviews)</p>
+      </div>
+
+      <h4>$1999.00</h4>
+      <p class="description">
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution.
+      </p>
+
+      <h4>Color</h4>
+      <div class="colors">
+        <div class="color gray"></div>
+        <div class="color blue"></div>
+        <div class="color black"></div>
+        <div class="color violence"></div>
+      </div>
+
+      <div class="purchase">
+        <nz-input-number
+          [ngModel]="0"
+          [nzMin]="1"
+          [nzMax]="10"
+          [nzStep]="1"
+        ></nz-input-number>
+
+        <button nz-button nzType="primary" class="shop-button">
+          Add to Cart
+        </button>
+
+        <button
+          nz-button
+          nzType="text"
+          nzShape="circle"
+          class="favorite-button"
+        >
+          <img src="../../../assets/svgs/heart.svg" alt="" />
+        </button>
+      </div>
+
+      <h2>Share</h2>
+      <div class="share-buttons">
+        <button
+          *ngFor="let socialMedia of socialMedias"
+          nz-button
+          nzShape="circle"
+          nzType="primary"
+        >
+          <img [src]="socialMedia.path" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <app-tabs></app-tabs>
+
+  <h1>Related Products</h1>
+
+  <div class="related-items">
+    <div *ngFor="let relatedItem of relatedItems" class="item">
+      <img [src]="relatedItem.imgPath" alt="" />
+      <h3>{{ relatedItem.name }}</h3>
+      <nz-rate [(ngModel)]="relatedItem.rate"></nz-rate>
+      <p>{{ relatedItem.price }}</p>
+    </div>
+  </div>
+</div>
+.<ng-template #dot>
+  <div class="box"></div>
+</ng-template>

@@ -1,0 +1,100 @@
+<nz-tabset>
+  <nz-tab nzTitle="Descriptions"
+    ><p>
+      t is a long established fact that a reader will be distracted by the
+      readable content of a page when looking at its layout. The point of using
+      Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+      as opposed to using 'Content here, content here', making it look like
+      readable English. Many desktop publishing packages and web page editors
+      now use Lorem Ipsum as their default model text, and a search for 'lorem
+      ipsum' will uncover many web sites still in their infancy.
+    </p>
+
+    <p>
+      Various versions have evolved over the years, sometimes by accident,
+      sometimes on purpose (injected humour and the like).
+    </p></nz-tab
+  >
+  <nz-tab nzTitle="Additional Information">
+    <div class="list-container">
+      <div class="names">
+        <h3>Brand</h3>
+        <h3>Item Weight</h3>
+        <h3>Item Width</h3>
+        <h3>Screen Size</h3>
+        <h3>Model Number</h3>
+        <h3>Ram Size</h3>
+        <h3>Operating System</h3>
+      </div>
+      <div class="descriptions">
+        <p>Apple</p>
+        <p>65 CM</p>
+        <p>31.4 CM</p>
+        <p>6.5 Inch</p>
+        <p>MF841HN/A</p>
+        <p>6 GB</p>
+        <p>ios 17</p>
+      </div>
+    </div>
+  </nz-tab>
+  <nz-tab nzTitle="Reviews">
+    <nz-comment
+      *ngFor="let item of items"
+      [nzAuthor]="author"
+      [nzDatetime]="time"
+    >
+      <nz-avatar
+        nz-comment-avatar
+        nzIcon="user"
+        [nzSrc]="item.imgPath"
+      ></nz-avatar>
+      <nz-comment-content>
+        <h2>{{ item.title }}</h2>
+        <p>
+          {{ item.description }}
+        </p>
+      </nz-comment-content>
+      <nz-divider></nz-divider>
+
+      <ng-template #author>
+        <div class="author-container">
+          <h3>{{ item.author }}</h3>
+          <nz-rate [(ngModel)]="item.rate"></nz-rate>
+        </div>
+      </ng-template>
+    </nz-comment>
+
+    <div class="form-container">
+      <h3>Add your Review</h3>
+      <div class="rate">
+        <p>Your Rating</p>
+        <nz-rate [ngModel]="0"></nz-rate>
+      </div>
+      <form nz-form>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input name="email" type="text" id="name" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="email"
+            >E-mail Address</nz-form-label
+          >
+          <nz-form-control>
+            <input nz-input name="email" type="email" id="email" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <nz-form-label [nzSpan]="6" nzFor="review"
+              >Your Review</nz-form-label
+            >
+            <textarea rows="4" nz-input id="review"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+        <button nz-button nzType="primary" class="submit-button">Submit</button>
+      </form>
+    </div>
+  </nz-tab>
+</nz-tabset>
