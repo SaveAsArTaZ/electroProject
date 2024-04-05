@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/cdk/overlay-prebuilt.css';
+
 :root {
   --primary-color: hsl(214, 67%, 33%);
   --primary-color-2: hsla(214, 67%, 33%, 0.1);
@@ -42,4 +44,9 @@ html {
     font-weight: 400;
     font-size: 1.1rem;
   }
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
 }

@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Create New Account</h2>
+  <p>Please enter details</p>
+  <div class="register-form">
+    <input type="text" nz-input placeholder="Name" />
+    <input type="email" nz-input placeholder="Email Address" />
+    <input type="password" nz-input placeholder="Password" />
+    <label nz-checkbox [ngModel]="true">
+      <span>I agree to the Terms & Conditions</span>
+    </label>
+
+    <button nz-button (click)="onRegisterButtonClicked()" class="register-button" nzType="primary">Register</button>
+    <nz-divider [nzText]="text">
+      <ng-template #text>
+        <p>Or Register With</p>
+      </ng-template>
+    </nz-divider>
+
+    <button nz-button nzType="text">
+      <img src="../../../../assets/svgs/google-2.svg" alt="" />Register with Google
+    </button>
+    <button nz-button nzType="text">
+      <img src="../../../../assets/svgs/apple.svg" alt="" />Register with Apple
+    </button>
+  </div>
+</div>
+
+<ng-template cdkPortal>
+  <app-otp-section></app-otp-section>
+</ng-template>
