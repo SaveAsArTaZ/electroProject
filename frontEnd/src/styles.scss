@@ -9,6 +9,7 @@
   --white: hsl(0, 0%, 100%, 1);
   --green: hsla(119, 62%, 52%, 0.1);
   --green-2: hsl(119, 62%, 52%);
+  --red: hsl(0, 100%, 50%);
 }
 @font-face {
   font-family: "Montserrat";
@@ -18,16 +19,16 @@
 
 * {
   font-family: "Montserrat", sans-serif;
-}
 
-html {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 
   &::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
   }
+}
 
+html {
   h1,
   h2,
   h3,
