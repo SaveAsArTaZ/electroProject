@@ -6,12 +6,53 @@
   <button nz-button nzType="text" nzShape="circle">
     <img src="../../../assets/svgs/favorite.svg" alt="search">
   </button>
-  <nz-badge [nzCount]="5" [nzStyle]="{ backgroundColor: '#1C4D8DFF' }">
+  <nz-badge [nzCount]="2" [nzStyle]="{ backgroundColor: '#1C4D8DFF' }">
     <button nz-button nzType="text" nzShape="circle">
       <img src="../../../assets/svgs/card.svg" alt="search">
     </button>
   </nz-badge>
-  <button nz-button nzType="primary" class="login-button">
-    Login
-  </button>
+  <button nz-button nzType="primary" class="login-button">Login</button>
+  <nz-drawer
+    [(nzVisible)]="visible"
+    [nzClosable]="false"
+    (nzOnClose)="onDrawerClosed()"
+  >
+    <ng-container *nzDrawerContent>
+      <div class="drawer-container">
+        <div class="flex-start-content">
+          <p>
+            You have <b>{{ cardItems.length }} items</b> in your cart
+          </p>
+          <div *ngFor="let item of cardItems" class="item">
+            <img [src]="item.imgPath" alt="" />
+            <div class="information">
+              <p>{{ item.name }}</p>
+              <h3>{{ item.price }}</h3>
+              <p>QTY:{{ item.quantity }}</p>
+            </div>
+            <button
+              nz-button
+              nzType="text"
+              nzShape="circle"
+              class="delete-button"
+            >
+              <span nz-icon nzType="delete" nzTheme="outline"></span>
+            </button>
+          </div>
+        </div>
+        <div class="flex-end-content">
+          <div class="subtotal">
+            <h3>Subtotal</h3>
+            <h3>$2249.00</h3>
+          </div>
+          <button nz-button nzType="text" class="viewCart-button">
+            View Cart
+          </button>
+          <button nz-button nzType="primary" class="checkout-button">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </nz-drawer>
 </div>
