@@ -8,7 +8,7 @@
       <label nz-checkbox>
         <span>Remember me</span>
       </label>
-      <a class="login-form-forgot">Forgot password</a>
+      <a (click)="onForgetPasswordClicked()" class="login-form-forgot">Forgot password</a>
     </div>
     <button nz-button class="login-button" nzType="primary">Log in</button>
     <button
@@ -36,4 +36,8 @@
 
 <ng-template cdkPortal>
   <app-register></app-register>
+</ng-template>
+
+<ng-template cdkPortal>
+  <app-password-changed-modal></app-password-changed-modal>
 </ng-template>
