@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Welcome 👋</h2>
+  <p>please login here</p>
+  <div class="login-form">
+    <input type="email" nz-input placeholder="Email Address" />
+    <input type="password" nz-input placeholder="Password" />
+    <div class="options">
+      <label nz-checkbox>
+        <span>Remember me</span>
+      </label>
+      <a (click)="onForgetPasswordClicked()" class="login-form-forgot">Forgot password</a>
+    </div>
+    <button nz-button class="login-button" nzType="primary">Log in</button>
+    <button
+      nz-button
+      (click)="onRegisterButtonClicked()"
+      class="register-button"
+      nzType="text"
+    >
+      Register
+    </button>
+    <nz-divider [nzText]="text">
+      <ng-template #text>
+        <p>Or Login With</p>
+      </ng-template>
+    </nz-divider>
+
+    <button nz-button nzType="text">
+      <img src="../../../../assets/svgs/google-2.svg" alt="" />Login with Google
+    </button>
+    <button nz-button nzType="text">
+      <img src="../../../../assets/svgs/apple.svg" alt="" />Login with Apple
+    </button>
+  </div>
+</div>
+
+<ng-template cdkPortal>
+  <app-register></app-register>
+</ng-template>
+
+<ng-template cdkPortal>
+  <app-password-changed-modal></app-password-changed-modal>
+</ng-template>

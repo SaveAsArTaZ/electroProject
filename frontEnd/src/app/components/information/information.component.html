@@ -8,12 +8,19 @@
   </button>
   <nz-badge [nzCount]="2" [nzStyle]="{ backgroundColor: '#1C4D8DFF' }">
     <button nz-button (click)="onCardClicked()" nzType="text" nzShape="circle">
-      <img src="../../../assets/svgs/card.svg" alt="search" />
+      <img src="../../../assets/svgs/cart.svg" alt="search" />
     </button>
   </nz-badge>
-  <button nz-button nzType="primary" class="login-button">Login</button>
+  <button
+    nz-button
+    (click)="onLoginClicked()"
+    nzType="primary"
+    class="login-button"
+  >
+    Login
+  </button>
   <nz-drawer
-    [(nzVisible)]="visible"
+    [(nzVisible)]="isDrawerVisible"
     [nzClosable]="false"
     (nzOnClose)="onDrawerClosed()"
   >
@@ -56,3 +63,7 @@
     </ng-container>
   </nz-drawer>
 </div>
+
+<ng-template cdkPortal>
+  <app-login></app-login>
+</ng-template>
