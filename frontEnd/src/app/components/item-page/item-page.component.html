@@ -29,11 +29,11 @@
       </div>
 
       <div class="rate">
-        <nz-rate [ngModel]="0"></nz-rate>
+        <nz-rate [ngModel]="0" (ngModelChange)="onRateChange($event)"></nz-rate>
         <p>5.0 (121 Reviews)</p>
       </div>
 
-      <h4>$1999.00</h4>
+      <h4>{{changePriceService.price}}</h4>
       <p class="description">
         It is a long established fact that a reader will be distracted by the
         readable content of a page when looking at its layout. The point of
@@ -42,10 +42,7 @@
 
       <h4>Color</h4>
       <div class="colors">
-        <div class="color gray"></div>
-        <div class="color blue"></div>
-        <div class="color black"></div>
-        <div class="color violence"></div>
+        <div *ngFor="let color of colors" [ngClass]="color" (click)="onColorClicked(color)" class="color"></div>
       </div>
 
       <div class="purchase">
@@ -56,7 +53,7 @@
           [nzStep]="1"
         ></nz-input-number>
 
-        <button nz-button nzType="primary" class="shop-button">
+        <button nz-button (click)="onAddItemClicked()" nzType="primary" class="shop-button">
           Add to Cart
         </button>
 

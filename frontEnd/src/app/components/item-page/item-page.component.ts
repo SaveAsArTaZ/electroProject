@@ -3,7 +3,7 @@ import {
   NzBreadCrumbComponent,
   NzBreadCrumbItemComponent,
 } from 'ng-zorro-antd/breadcrumb';
-import { NgForOf } from '@angular/common';
+import { NgClass, NgForOf } from '@angular/common';
 import {
   NzCarouselComponent,
   NzCarouselContentDirective,
@@ -15,7 +15,9 @@ import { NzButtonComponent } from 'ng-zorro-antd/button';
 import { NzIconDirective } from 'ng-zorro-antd/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { TabsComponent } from './components/tabs/tabs.component';
-
+import { ChangePriceService } from './services/change-price.service';
+import { CartItemsService } from '../header/components/information/services/cart-items.service';
+import { v4 as uuid } from 'uuid';
 @Component({
   selector: 'app-item-page',
   standalone: true,
@@ -32,6 +34,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
     NzIconDirective,
     HttpClientModule,
     TabsComponent,
+    NgClass,
   ],
   templateUrl: './item-page.component.html',
   styleUrl: './item-page.component.scss',
@@ -89,4 +92,30 @@ export class ItemPageComponent {
       price: '$250.00',
     },
   ];
+
+  protected colors: string[] = ['gray', 'blue', 'black', 'violence'];
+
+  public constructor(
+    protected readonly changePriceService: ChangePriceService,
+    private readonly cartItemsService: CartItemsService,
+  ) {}
+
+  onColorClicked(color: string): void {
+    this.changePriceService.change(color);
+  }
+
+  onAddItemClicked() {
+    const item = {
+      imgPath: '../../assets/svgs/iphone.svg',
+      name: 'Apple iPhone 14 Pro',
+      price: '$1999.00',
+      quantity: 1,
+      id: uuid(),
+    };
+    this.cartItemsService.add(item);
+  }
+
+  onRateChange(rateValue: number) {
+    console.log(rateValue);
+  }
 }
