@@ -1,18 +1,27 @@
-import {Component} from '@angular/core';
-import {NzButtonModule} from 'ng-zorro-antd/button';
-import {SearchBoxComponent} from "../search-box/search-box.component";
-import {InformationComponent} from "../information/information.component";
-import {NzDropDownDirective, NzDropdownMenuComponent} from "ng-zorro-antd/dropdown";
-import {NzIconDirective} from "ng-zorro-antd/icon";
-import {NavigationComponent} from "../navigation/navigation.component";
+import { Component } from '@angular/core';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
+import {
+  NzDropDownDirective,
+  NzDropdownMenuComponent,
+} from 'ng-zorro-antd/dropdown';
+import { NzIconDirective } from 'ng-zorro-antd/icon';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { InformationComponent } from './components/information/information.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NzButtonModule, SearchBoxComponent, InformationComponent, NzDropDownDirective, NzDropdownMenuComponent, NzIconDirective, NavigationComponent],
+  imports: [
+    NzButtonModule,
+    SearchBoxComponent,
+    InformationComponent,
+    NzDropDownDirective,
+    NzDropdownMenuComponent,
+    NzIconDirective,
+    NavigationComponent,
+  ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}

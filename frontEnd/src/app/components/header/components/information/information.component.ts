@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NzButtonComponent } from 'ng-zorro-antd/button';
 import { NzBadgeComponent } from 'ng-zorro-antd/badge';
 import {
@@ -12,6 +12,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { LoginComponent } from './components/login/login.component';
 import { CdkPortal, PortalModule } from '@angular/cdk/portal';
 import { OverlayService } from './services/overlay.service';
+import { CartItemsService } from './services/cart-items.service';
 
 @Component({
   selector: 'app-information',
@@ -32,26 +33,22 @@ import { OverlayService } from './services/overlay.service';
   templateUrl: './information.component.html',
   styleUrl: './information.component.scss',
 })
-export class InformationComponent {
+export class InformationComponent implements OnInit {
   @ViewChild(CdkPortal) portal!: CdkPortal;
 
-  protected cardItems = [
-    {
-      imgPath: '../../assets/svgs/iphone.svg',
-      name: 'Apple iPhone 14 Pro',
-      price: '$1999.00',
-      quantity: 1,
-    },
-    {
-      imgPath: '../../assets/svgs/image 25.svg',
-      name: 'Asus ROG Delta S',
-      price: '$250.00',
-      quantity: 1,
-    },
-  ];
+  protected cardItems: {
+    quantity: number;
+    price: string;
+    imgPath: string;
+    name: string;
+    id: string;
+  }[] = [];
   protected isDrawerVisible: boolean = false;
 
-  public constructor(private readonly overlayService: OverlayService) {}
+  public constructor(
+    private readonly overlayService: OverlayService,
+    protected readonly cartItemsService: CartItemsService,
+  ) {}
 
   protected onCardClicked(): void {
     this.isDrawerVisible = true;
@@ -63,5 +60,14 @@ export class InformationComponent {
 
   protected onLoginClicked(): void {
     this.overlayService.create(this.portal);
+  }
+
+  ngOnInit(): void {
+    this.cardItems = this.cartItemsService.cardItems;
+  }
+
+  onDeleteItemClicked(id: string) {
+    this.cartItemsService.remove(id);
+    this.cardItems = this.cartItemsService.cardItems;
   }
 }
